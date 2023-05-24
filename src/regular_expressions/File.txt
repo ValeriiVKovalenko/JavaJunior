@@ -1,0 +1,13 @@
+Person 1: John Smith, USA, New York, 123 Main Street, Apt 4B, john.smith@example.com, +1 123-456-7890
+Person 2: Emily Johnson, Canada, Toronto, 456 Maple Avenue, Apt 7C, emily.johnson@example.com, +1 987-654-3210
+Person 3: Alex Lee, UK, London, 789 Oak Street, Apt 2A, alex.lee@example.com, +44 1234567890
+Chloe Smith, United States, New York, Main Street, 10, 305, chloe.smith@example.com, 10 Main Street, New York,
+United States, +1 555-6789
+Liam Wilson, United Kingdom, London, Park Avenue, 15, 502, liam.wilson@example.com, 15 Park Avenue, London,
+United Kingdom, +44 123-4567
+Sophia Taylor, Spain, Barcelona, Beach Road, 20, 102, sophia.taylor@example.com, 20 Beach Road, Barcelona, Spain,
++34 987-6543
+Noah Johnson, South Korea, Seoul, Mountain View, 5, 201, noah.johnson@example.com, 5 Mountain View, Seoul,
+South Korea, +82 876-5432
+Olivia Davis, Canada, Toronto, Maple Street, 12, 405, olivia.davis@example.com, 12 Maple Street, Toronto,
+Canada, +1 987-6543
