@@ -1,13 +1,46 @@
+
+
+import java.util.*;
+
 public class Test {
     public static final String SIX = "0123456789abcdef";
     public static void main(String[] args) {
-        String s = "Милана Койчева, Россия, г. Петропавловск-Камчатский, Космонавтов ул., д. 14 кв.102, " +
-                "milana17@yandex.ru, +7 (992) 175-13-27; " +
-                "Кира Деменока, Россия, г. Евпатория, Дружная ул., д. 14 кв.144, " +
-                "kira4836@mail.ru, +7 (921) 952-47-99; " +
-                "Жанна Ефимова, Россия, г. Омск, Речной пер., д. 10 кв.15, " +
-                "janna21011996@mail.ru, +7 (962) 602-65-40";
+    Map<ProductEx, Integer> map = new HashMap<>();
+
+    ProductEx p1 = new ProductEx("Coffe", 21.2);
+    ProductEx p2 = new ProductEx("Tea", 33.2);
+
+    map.put(p1, 44);
+    map.put(p2, 14);
+
+        System.out.println(check(map, p1));
+
+
+    }
+    public static boolean check(Map<ProductEx, Integer> map, ProductEx productEx) {
+        return map.containsKey(productEx);
     }
 
+}
+class ProductEx {
+    private String name;
+    private double price;
 
+    public ProductEx(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductEx productEx = (ProductEx) o;
+        return Double.compare(productEx.price, price) == 0 && Objects.equals(name, productEx.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, price);
+    }
 }

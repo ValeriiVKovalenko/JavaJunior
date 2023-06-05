@@ -10,8 +10,8 @@ import java.util.Arrays;
 
 public class MyArrayList<T> {
     private static final int CAPACITY = 10;
-    private Object[] array = new Object[CAPACITY];
     private static final int GROW_MULTIPLIER = 2;
+    private Object[] array = new Object[CAPACITY];
     private int size;
 
 
