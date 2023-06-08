@@ -1,10 +1,31 @@
 package javarush.shop;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Warehouse {
     private Map<Product, Integer> productMap = new HashMap<>();
+
+    public Set<String> getProductTypes() {
+
+        Set<String> productTypes = new HashSet<>();
+        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
+            productTypes.add(entry.getKey().getProductDescription().getType());
+        }
+        return productTypes;
+    }
+
+    public Map<String, List<Product>> getProductsByType() {
+        Map<String, List<Product>> productsByType = new HashMap<>();
+
+        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
+            Product product = entry.getKey();
+            String productType = entry.getKey().getProductDescription().getType();
+
+            productsByType.computeIfAbsent(productType, key -> new ArrayList<>())
+                            .add(product);
+        }
+        return productsByType;
+    }
 
     public void addProduct(Product product, Integer count) {
         if(productMap.containsKey(product)) {
@@ -47,5 +68,7 @@ public class Warehouse {
         }
     }
 
-
+    public Map<Product, Integer> getProductMap() {
+        return productMap;
+    }
 }

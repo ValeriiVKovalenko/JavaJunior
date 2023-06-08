@@ -4,7 +4,14 @@ import java.util.Objects;
 
 public class Product {
     private String name;
+    private ProductDescription productDescription;
     private double price;
+
+    public Product(String name, ProductDescription productDescription, double price) {
+        this.name = name;
+        this.productDescription = productDescription;
+        this.price = price;
+    }
 
     public double getPrice() {
         return price;
@@ -14,14 +21,13 @@ public class Product {
         this.price = price;
     }
 
-    public Product(String name, double price) {
-        this.name = name;
-        this.price = price;
-    }
-
 
     public Product(String name) {
         this.name = name;
+    }
+
+    public ProductDescription getProductDescription() {
+        return productDescription;
     }
 
     public String getName() {
@@ -47,6 +53,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return name + ": " + price;
+        return name + ": " + price + '₴';
     }
 }
