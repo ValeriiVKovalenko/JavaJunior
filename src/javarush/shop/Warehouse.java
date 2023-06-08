@@ -45,20 +45,6 @@ public class Warehouse {
         return productMap.containsKey(product);
     }
 
-    public void findProductByName(String productName) {
-        boolean isFound = false;
-        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-            if (entry.getKey().getName().equals(productName)) {
-                System.out.printf("Product %s is find.%n", productName);
-                isFound = true;
-                break;
-            }
-        }
-        if (!isFound) {
-            System.out.printf("Product %s is not found.", productName);
-        }
-    }
-
     public void print() {
         System.out.println("Warehouse contents:");
         for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {

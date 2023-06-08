@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Client {
-
     private String name;
     private double balance;
     private Map<Product, Integer> basket;
@@ -31,6 +30,7 @@ public class Client {
             basket.remove(product);
         }
     }
+
     public void removeItemFromBasket(Product product) {
       basket.remove(product);
     }

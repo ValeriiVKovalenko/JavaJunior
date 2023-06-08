@@ -23,7 +23,6 @@ public class Shop {
         return warehouse.getProductsByType();
     }
 
-
     public void transferItemToClient(Cashier cashier, Product product, int count) {
         if (hasProduct(product) && canSellProduct(cashier, product)) {
             double sum = cashier.calculateTotalPrice(product, count);
@@ -75,18 +74,8 @@ public class Shop {
         return null;
     }
 
-    public void addCashier(Cashier cashier) {
-        cashiers.add(cashier);
-    }
     public List<Cashier> getCashiers() {
         return cashiers;
-    }
-    public void addProductToWarehouse(Product product, int count) {
-        warehouse.addProduct(product, count);
-    }
-
-    public void printWarehouse() {
-        warehouse.print();
     }
 
     public boolean hasProduct(Product product) {

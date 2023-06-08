@@ -12,9 +12,7 @@ public class World {
         world.initialize();
         Client client = world.clientList.get(0);
         world.start(client);
-
     }
-
 
     public void initialize() {
 
@@ -179,5 +177,4 @@ public class World {
         }
         return exitLoop;
     }
-
 }
