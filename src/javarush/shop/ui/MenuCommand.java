@@ -1,4 +1,4 @@
-package javarush.shop;
+package javarush.shop.ui;
 
 public enum MenuCommand {
     SHOW_PRODUCTS_TYPE(1, "Show product types"),
@@ -13,12 +13,12 @@ public enum MenuCommand {
     private final int label;
     private final String description;
 
-    MenuCommand(int label, String description) {
-        this.label = label;
+    MenuCommand(int numberOfOperation, String description) {
+        this.label = numberOfOperation;
         this.description = description;
     }
 
-    public int getLabel() {
+    public int getNumberOfOperation() {
         return label;
     }
 

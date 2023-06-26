@@ -1,4 +1,4 @@
-package javarush.shop;
+package javarush.shop.model;
 
 import java.util.Objects;
 
