@@ -1,0 +1,8 @@
+
+c
+java:S1192	"FDefine a constant instead of duplicating this literal "so-so" 3 times.(Ï”¦8Şº˜ÿÿ0
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(÷¯ä‘8âº˜ÿÿ0
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Õ±šÿÿ0
+N
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹8Ö±šÿÿ0

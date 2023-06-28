@@ -1,36 +1,19 @@
 package javarush.shop.service.cashier;
 
-import javarush.shop.model.Product;
+import javarush.shop.dao.cashier_dao.CashierDAO;
+import javarush.shop.model.Cashier;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
 public class CashierServiceImp implements CashierService {
-    private String name;
-    private int ageExp;
-    private final Set<String> productTypes;
+    private final CashierDAO cashierDAO;
 
-    public CashierServiceImp() {
-        productTypes = new HashSet<>();
+    public CashierServiceImp(CashierDAO cashierDAO) {
+        this.cashierDAO = cashierDAO;
     }
 
     @Override
-    public void addProductType(String productType) {
-        productTypes.add(productType);
-    }
-
-    @Override
-    public Set<String> getProductTypes() {
-        return productTypes;
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public int getAgeExp() {
-        return ageExp;
+    public List<Cashier> getCashiers() {
+        return cashierDAO.getCashiers();
     }
 }

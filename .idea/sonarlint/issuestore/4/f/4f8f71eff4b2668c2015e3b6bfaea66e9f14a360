@@ -1,0 +1,5 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¢éïùÿÿÿÿ
+q
+java:S1172"ORemove these unused method parameters "component1", "component2", "component3".(¹“•øÿÿÿÿ8Ÿ£öÅƒ1
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Œ§÷ñşÿÿÿÿ8µ›îÅƒ1

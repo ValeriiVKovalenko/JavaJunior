@@ -1,0 +1,11 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ϊΏ²ούÿÿÿÿ8«•Φ1
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(ϊΏ²ούÿÿÿÿ8«•Φ1
+E
+java:S1068X"(Remove this unused "name" private field.(Λ¥Ό8«•Φ1
+N
+java:S1068Y",Remove this unused "lastname" private field.(Η—ωθόÿÿÿÿ8«•Φ1
+G
+java:S1068Z"*Remove this unused "course" private field.(±ρέ8«•Φ1
+I
+java:S1068[",Remove this unused "avgGrade" private field.(Ύ›Ε8«•Φ1

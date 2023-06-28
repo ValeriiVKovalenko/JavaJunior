@@ -1,0 +1,18 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(†Ì´æşÿÿÿÿ8¹Øê—„1
+=
+java:S1170"!Make this final field static too.(¿ş=8¿Øê—„1
+X	java:S125&"<This block of commented-out lines of code should be removed.(­åÇÇ8¸á†˜„1
+Z	java:S1062"9Replace this use of System.out or System.err by a logger.(éÅ¨Ôûÿÿÿÿ8Š˜ë—„1
+]	java:S125."<This block of commented-out lines of code should be removed.(Æ ¢Úşÿÿÿÿ8û†˜„1
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(ËË¦÷ùÿÿÿÿ8²Äë—„1
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(éÅ¨Ôûÿÿÿÿ8øãí—„1
+U	java:S1066"9Replace this use of System.out or System.err by a logger.(‹¢Óä8ùãí—„1
+H
+java:S1068",Remove this unused "valueOne" private field.(¿ş=8ºá†˜„1
+I
+java:S1068"-Remove this unused "VALUE_TWO" private field.(½™P8ÆØê—„1
+G
+java:S1068"*Remove this unused "value1" private field.(áÊÈ˜8ÆØê—„1
+F
+java:S1068")Remove this unused "VAL_3" private field.(Øæ‡Ú8ÆØê—„1

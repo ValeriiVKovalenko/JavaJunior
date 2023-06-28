@@ -1,0 +1,18 @@
+
+m
+java:S11922"RDefine a constant instead of duplicating this literal "isMarkSupported: " 3 times.(ØÜùÜşÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÕËÇÆ
+Q	java:S125"<This block of commented-out lines of code should be removed.(ÕËÇÆ
+Q	java:S125$"<This block of commented-out lines of code should be removed.(ÕËÇÆ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(ØÜùÜşÿÿÿÿ
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(Şšì˜
+N	java:S1064"9Replace this use of System.out or System.err by a logger.(Şšì˜
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(Şšì˜
+S	java:S1069"9Replace this use of System.out or System.err by a logger.(ØÜùÜşÿÿÿÿ
+M	java:S106;"9Replace this use of System.out or System.err by a logger.(¹»‚3
+S	java:S106?"9Replace this use of System.out or System.err by a logger.(ØÜùÜşÿÿÿÿ
+O
+java:S1128"4Remove this unused import 'collections.set.test1.B'.(Ú¨­‡øÿÿÿÿ
+I
+java:S1068
+"3Remove this unused "AVAILABLE_BYTES" private field.(Ò¶¡ê

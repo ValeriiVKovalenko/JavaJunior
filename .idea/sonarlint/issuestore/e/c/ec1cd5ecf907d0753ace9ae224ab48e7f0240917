@@ -1,0 +1,13 @@
+
+U	java:S106"9Replace this use of System.out or System.err by a logger.(œÖª8éãĞ—1
+P
+java:S1128"3Remove this unused import 'java.io.BufferedReader'.(€é²Å8ÎˆÑ—1
+F
+java:S1128")Remove this unused import 'java.io.File'.(†Ğ¥Å8ÎˆÑ—1
+Q
+java:S1128"/Remove this unused import 'java.io.FileReader'.(Â¡¢äşÿÿÿÿ8ÏˆÑ—1
+M
+java:S1128	"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÏˆÑ—1
+Z
+java:S1128
+"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ÏˆÑ—1

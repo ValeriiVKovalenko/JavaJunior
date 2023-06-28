@@ -1,0 +1,9 @@
+
+j
+java:S1104"MMake b a static final constant or non-public and provide accessors if needed.(ƒñÊ«8Ä«—Åƒ1
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶„žþ8‚¿‚Åƒ1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(–áÖˆ8“ ¿Åƒ1
+R
+java:S1854"5Remove this useless assignment to local variable "c".(—çÇ¢8ïç¡Åƒ1
+C
+java:S1481"&Remove this unused "c" local variable.(—çÇ¢8ðç¡Åƒ1

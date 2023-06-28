@@ -1,0 +1,8 @@
+
+†
+java:S4165	"dRemove this useless assignment; "weight" already holds the assigned value along all execution paths.(Õ‰š™ùÿÿÿÿ8¬¼õƒ1
+E
+java:S1185"(Remove this method to simply inherit it.(“È8©Ê¡€„1
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¼’âë8ÃñÖòƒ1
+Q
+java:S1656	"/Remove or correct this useless self-assignment.(Õ‰š™ùÿÿÿÿ8¯¼õƒ1

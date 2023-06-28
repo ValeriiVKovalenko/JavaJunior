@@ -1,0 +1,15 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(×¹ÎÊûÿÿÿÿ8¸€­Ö‰1
+]
+java:S1854+";Remove this useless assignment to local variable "person1".(»îË÷þÿÿÿÿ8Á€­Ö‰1
+_
+java:S1854""=Remove this useless assignment to local variable "converted".(ý¿ô·ýÿÿÿÿ8Â€­Ö‰1
+X	java:S125"<This block of commented-out lines of code should be removed.(¿íÍÞ8Æ€­Ö‰1
+P
+java:S1481"".Remove this unused "converted" local variable.(ý¿ô·ýÿÿÿÿ8Ç€­Ö‰1
+X	java:S125#"<This block of commented-out lines of code should be removed.(ÖØØ§8Ç€­Ö‰1
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(éß×ÿÿÿÿÿ8È€­Ö‰1
+N
+java:S1481+",Remove this unused "person1" local variable.(»îË÷þÿÿÿÿ8É€­Ö‰1
+N
+java:S1128"1Remove this unused import 'java.util.Comparator'.(î¹ó¹8„ûÌÃ1

@@ -1,26 +1,18 @@
 package javarush.shop.model;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Cashier {
-
-    private String name;
-    private int ageExp; // лет опыта
+    private final Long id;
+    private final String name;
+    private final int ageExp;
     private final Set<String> productTypes;
 
-    public Cashier(String name, int ageExp) {
+    public Cashier(Long id, String name, int ageExp, Set<String> productTypes) {
+        this.id = id;
         this.name = name;
         this.ageExp = ageExp;
-        productTypes = new HashSet<>();
-    }
-
-    public double calculateTotalPrice(Product product, int count) {
-        return product.getPrice() * count;
-    }
-
-    public void addProductType(String productType) {
-        productTypes.add(productType);
+        this.productTypes = productTypes;
     }
 
     public Set<String> getProductTypes() {
@@ -31,7 +23,4 @@ public class Cashier {
         return name;
     }
 
-    public int getAgeExp() {
-        return ageExp;
-    }
 }

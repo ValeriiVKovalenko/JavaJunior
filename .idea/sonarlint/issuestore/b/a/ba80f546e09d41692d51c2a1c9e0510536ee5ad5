@@ -1,0 +1,8 @@
+
+G
+java:S1481"*Remove this unused "phone" local variable.(‚­²æ8ğ¹Úíƒ1
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(ûèÒ¢8ó¹Úíƒ1
+U	java:S106("9Replace this use of System.out or System.err by a logger.(ÑÚÏ³8ìîÛíƒ1
+V
+java:S1117,"9Rename "number" which hides the field declared at line 5.(ÿŠÀ€8ûÓæíƒ1
+Z	java:S106-"9Replace this use of System.out or System.err by a logger.(½ã“ûÿÿÿÿ8ûÓæíƒ1

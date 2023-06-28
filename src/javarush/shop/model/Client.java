@@ -1,12 +1,18 @@
 package javarush.shop.model;
 
-import java.util.HashMap;
+import java.math.BigDecimal;
 import java.util.Map;
 
 public class Client {
+    private Long id;
     private String name;
-    private double balance;
+    private BigDecimal balance;
     private Map<Product, Integer> basket;
+
+    public Client(String name, BigDecimal balance) {
+        this.name = name;
+        this.balance = balance;
+    }
 
     public String getName() {
         return name;
@@ -16,25 +22,29 @@ public class Client {
         this.name = name;
     }
 
-    public void setBasket(Map<Product, Integer> basket) {
-        this.basket = basket;
+
+
+    public BigDecimal getBalance() {
+        return balance;
     }
 
-    public Client(String name, double balance) {
-        this.name = name;
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
-        basket = new HashMap<>();
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Map<Product, Integer> getBasket() {
         return basket;
     }
 
-    public double getBalance() {
-        return balance;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBasket(Map<Product, Integer> basket) {
+        this.basket = basket;
     }
 }

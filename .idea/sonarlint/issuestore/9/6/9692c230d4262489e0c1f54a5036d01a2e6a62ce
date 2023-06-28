@@ -1,0 +1,7 @@
+
+U	java:S106#"9Replace this use of System.out or System.err by a logger.(Ã¯â¢8ßÌ²îƒ1
+Z	java:S106%"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8àÌ²îƒ1
+D
+java:S1068"'Remove this unused "row" private field.(ÞÔô—8àÌ²îƒ1
+L
+java:S1068"*Remove this unused "column" private field.(º‘—ôÿÿÿÿÿ8áÌ²îƒ1

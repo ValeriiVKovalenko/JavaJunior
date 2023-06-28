@@ -1,0 +1,15 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡óŒÌ8¤Š‡Éƒ1
+T	java:S106"9Replace this use of System.out or System.err by a logger.(§­€8¿ˆÉƒ1
+^
+java:S1854"ARemove this useless assignment to local variable "placeSettings".(®¼»Š8÷³ŠÉƒ1
+O
+java:S1481"2Remove this unused "placeSettings" local variable.(®¼»Š8ø³ŠÉƒ1
+F
+java:S1068")Remove this unused "spoon" private field.(¦Áß÷8ªŠ‡Éƒ1
+J
+java:S1068"(Remove this unused "fork" private field.(Âîàûÿÿÿÿ8ªŠ‡Éƒ1
+F
+java:S1068")Remove this unused "knife" private field.(»ıŸç8ªŠ‡Éƒ1
+Q
+java:S1068"/Remove this unused "dinnerPlate" private field.(Á¤ş÷úÿÿÿÿ8ªŠ‡Éƒ1

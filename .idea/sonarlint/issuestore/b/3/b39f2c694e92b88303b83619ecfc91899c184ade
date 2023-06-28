@@ -1,0 +1,13 @@
+
+W
+java:S1854":Remove this useless assignment to local variable "human3".(Ã…Çè8í„ýô€1
+W
+java:S1854":Remove this useless assignment to local variable "human2".(ÓÑ°¼8í„ýô€1
+\
+java:S1854":Remove this useless assignment to local variable "human1".(†üßúÿÿÿÿÿ8í„ýô€1
+M
+java:S1481"+Remove this unused "human1" local variable.(†üßúÿÿÿÿÿ8í„ýô€1
+H
+java:S1481"+Remove this unused "human2" local variable.(ÓÑ°¼8í„ýô€1
+H
+java:S1481"+Remove this unused "human3" local variable.(Ã…Çè8í„ýô€1

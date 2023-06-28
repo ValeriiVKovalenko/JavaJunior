@@ -1,0 +1,22 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(óæãƒÿÿÿÿÿ8’…ïƒ1
+T	java:S106 "9Replace this use of System.out or System.err by a logger.(ƒ†Ïj8“…ïƒ1
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ì„ªûûÿÿÿÿ8•…ïƒ1
+U	java:S106&"9Replace this use of System.out or System.err by a logger.(ä–û8È×†ïƒ1
+Z	java:S106("9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8½¢ïƒ1
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(ƒ°ìë8Æ±ïƒ1
+Z	java:S1061"9Replace this use of System.out or System.err by a logger.(Ò£´úÿÿÿÿ8âš‘ïƒ1
+U	java:S1065"9Replace this use of System.out or System.err by a logger.(Îôğ­8Áñ‘ïƒ1
+Z	java:S1067"9Replace this use of System.out or System.err by a logger.(Œı½Äûÿÿÿÿ8¦¨’ïƒ1
+Z	java:S1069"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8§¨’ïƒ1
+c
+java:S1128"ARemove this unused import 'Bruce_Eckel.Kapitel7.art.mini_task.B'.(ÓÏ‡ıÿÿÿÿ8ÂÄ¶ïƒ1
+W
+java:S1068
+"5Remove this unused "libraryCardNumber" private field.(½°âÈÿÿÿÿÿ8–…ïƒ1
+M
+java:S1068"+Remove this unused "faculty" private field.(ï•¤ùÿÿÿÿ8–…ïƒ1
+Q
+java:S1068"/Remove this unused "dateOfBirth" private field.(ıÔ×ãıÿÿÿÿ8–…ïƒ1
+Q
+java:S1068"/Remove this unused "phoneNumber" private field.(Ôá“ùÿÿÿÿ8–…ïƒ1
