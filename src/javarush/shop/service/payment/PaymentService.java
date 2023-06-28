@@ -2,7 +2,9 @@ package javarush.shop.service.payment;
 
 import javarush.shop.model.Product;
 
+import java.math.BigDecimal;
+
 public interface PaymentService {
 
-    double calculateTotalPrice(Product product, int count);
+    BigDecimal calculateTotalPrice(Product product, int count);
 }

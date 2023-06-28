@@ -1,71 +1,52 @@
 package javarush.shop.model;
 
+import javarush.shop.dao.product_description_dao.ProductDescriptionDAO;
+import javarush.shop.dao.product_dao.ProductDAO;
+import javarush.shop.dao.warehouse_dao.WarehouseDAO;
+
 import java.util.*;
 
 public class Warehouse {
-    private final Map<Product, Integer> productMap = new HashMap<>();
+    ProductDAO productDAO;
+    ProductDescriptionDAO productDescriptionDAO;
+    WarehouseDAO warehouseDAO;
 
-    public Set<String> getProductTypes() {
-        Set<String> productTypes = new HashSet<>();
-        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-            productTypes.add(entry.getKey().getProductDescription().getType());
-        }
-        return productTypes;
+    public Warehouse(ProductDAO productDAO, ProductDescriptionDAO productDescriptionDAO, WarehouseDAO warehouseDAO) {
+        this.productDAO = productDAO;
+        this.productDescriptionDAO = productDescriptionDAO;
+        this.warehouseDAO = warehouseDAO;
     }
 
-    public Map<String, List<Product>> getProductsByType() {
-        Map<String, List<Product>> productsByType = new HashMap<>();
+    public List<String> getProductTypes() {
+        return productDescriptionDAO.getProductTypes();
+    }
 
-        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-            Product product = entry.getKey();
-            String productType = entry.getKey().getProductDescription().getType();
+    public List<Product> getProductsByType() {
+        return productDAO.getProducts();
+    }
 
-            productsByType.computeIfAbsent(productType, key -> new ArrayList<>())
-                    .add(product);
-        }
-        return productsByType;
+    public int getProductCount(String name) {
+        return warehouseDAO.getProductCount(name);
+    }
+
+    public Long getProductId(String name) {
+        return productDAO.getProductId(name);
     }
 
     public void addProduct(Product product, Integer count) {
-        if(productMap.containsKey(product)) {
-            productMap.put(product, productMap.get(product) + count);
-        } else {
-            productMap.put(product, count);
-        }
-    }
-
-    public void removeProduct(Product product, Integer count) {
-        if (productMap.containsKey(product) && productMap.get(product) >= count) {
-            Integer currentCount = productMap.get(product);
-            productMap.put(product, currentCount - count);
-        }
+        warehouseDAO.updateProductAddictionCount(product.getId(), count);
     }
 
     public boolean hasProduct(Product product) {
-        return productMap.containsKey(product);
+        Product productByName = productDAO.getProductByName(product.getName());
+        return productByName != null;
     }
 
-    public boolean hasProduct(String productName) {
-       for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-           String name = entry.getKey().getName();
-
-           if (productName.equals(name)) {
-               return true;
-           }
-       }
-       return false;
+    public Product getProduct(String productName) {
+        return productDAO.getProductByName(productName);
     }
 
-    public Map<Product, Integer> getProductMap() {
-        return productMap;
-    }
-
-    public void print() {
-        System.out.println("Warehouse contents:");
-        for (Map.Entry<Product, Integer> entry : productMap.entrySet()) {
-            Product product = entry.getKey();
-            int count = entry.getValue();
-            System.out.println(product.getName() + ": " + count);
-        }
+    public void removeProductCount(Long productId, int count) {
+        warehouseDAO.updateProductDedictionCount(productId, count);
     }
 }

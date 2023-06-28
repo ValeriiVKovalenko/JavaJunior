@@ -3,24 +3,24 @@ package javarush.shop.model;
 import javarush.shop.service.shop.ShopService;
 import javarush.shop.service.shop.ShopServiceImp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Shop {
     private List<Cashier> cashiers;
     private Warehouse warehouse;
-    private double bank;
+    private BigDecimal bank;
 
     public Shop() {
         cashiers = new ArrayList<>();
-        warehouse = new Warehouse();
     }
 
     public List<Cashier> getCashiers() {
         return cashiers;
     }
 
-    public double getBank() {
+    public BigDecimal getBank() {
         return bank;
     }
 
@@ -36,7 +36,7 @@ public class Shop {
         this.warehouse = warehouse;
     }
 
-    public void setBank(double bank) {
+    public void setBank(BigDecimal bank) {
         this.bank = bank;
     }
 }
