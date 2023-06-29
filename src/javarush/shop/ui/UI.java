@@ -41,13 +41,12 @@ public class UI {
     }
 
     private void initializeServices() {
-        DatabaseManager databaseManager = new DatabaseManager();
-        ClientDAO clientDAO = new SQLLiteClientDAO(databaseManager);
-        ProductDAO productDAO = new SQLLiteProductDAO(databaseManager);
-        CashierDAO cashierDAO = new SQLLiteCashierDAO(databaseManager);
-        ShopDAO shopDAO = new SQLLiteShopDAO(databaseManager);
-        ProductDescriptionDAO productDescriptionDAO = new SQLLiteProductDescriptionDAO(databaseManager);
-        WarehouseDAO warehouseDAO = new SQLLiteWarehouseDAO(databaseManager);
+        ClientDAO clientDAO = new SQLLiteClientDAO(DatabaseManager.getInstance());
+        ProductDAO productDAO = new SQLLiteProductDAO(DatabaseManager.getInstance());
+        CashierDAO cashierDAO = new SQLLiteCashierDAO(DatabaseManager.getInstance());
+        ShopDAO shopDAO = new SQLLiteShopDAO(DatabaseManager.getInstance());
+        ProductDescriptionDAO productDescriptionDAO = new SQLLiteProductDescriptionDAO(DatabaseManager.getInstance());
+        WarehouseDAO warehouseDAO = new SQLLiteWarehouseDAO(DatabaseManager.getInstance());
         Warehouse warehouse = new Warehouse(productDAO, productDescriptionDAO, warehouseDAO);
         clientService = new ClientServiceImpl(clientDAO);
         PaymentService paymentService = new PaymentServiceImpl();
@@ -118,15 +117,15 @@ public class UI {
                     boolean hasContinueShopping;
                     do {
                         System.out.print("Select product: ");
-                        String selectedItem = scanner.next();
+                        String selectedItem = scanner.next().toLowerCase();
                         boolean inputValidator = false;
                         while (!inputValidator) {
                             boolean isProductExist = shopService.hasProductByName(selectedItem);
                             if (isProductExist) {
                                 inputValidator = true;
                             } else {
-                                System.out.println("Selected product doesn't exist. Try one more time");
-                                selectedItem = scanner.next();
+                                System.out.print("Selected product doesn't exist. Try one more time: ");
+                                selectedItem = scanner.next().toLowerCase();
                             }
                         }
 
@@ -141,7 +140,7 @@ public class UI {
                             if (isProductSufficientExist) {
                                 inputValidator2 = true;
                             } else {
-                                System.out.println("Selected product sufficient doesn't exist. Try one more time");
+                                System.out.print("Selected product sufficient doesn't exist. Try one more time: ");
                                 selectedCount = scanner.nextInt();
                                 scanner.nextLine();
                             }
@@ -157,16 +156,22 @@ public class UI {
 
                     do {
 
+                        Map<Product, Integer> basket = clientService.getBasket(clientName);
+                        if (basket.isEmpty()) {
+                            System.out.println("Your basket is empty.");
+                            break;
+                        }
+
                         System.out.print("Choose a way to remove: (product/count): ");
                         String chooseWayToRemove = scanner.nextLine();
 
                         if (chooseWayToRemove.equalsIgnoreCase("product")) {
                             System.out.print("Select product to remove: ");
-                            String selectedProductToRemove = scanner.nextLine();
+                            String selectedProductToRemove = scanner.nextLine().toLowerCase();
                             removeItemFromBasket(clientName, selectedProductToRemove);
                         } else if (chooseWayToRemove.equalsIgnoreCase("count")) {
                             System.out.print("Select product to remove: ");
-                            String selectedProductToRemove = scanner.nextLine();
+                            String selectedProductToRemove = scanner.nextLine().toLowerCase();
 
 
                             System.out.print("Select count to remove: ");
@@ -186,7 +191,7 @@ public class UI {
                     break;
                 case RETURN_PRODUCT:
                     System.out.print("Enter what product you want to return: ");
-                    String productToReturn = scanner.nextLine();
+                    String productToReturn = scanner.nextLine().toLowerCase();
 
                     System.out.print("Enter count: ");
                     int count = scanner.nextInt();
@@ -253,7 +258,7 @@ public class UI {
         while (!inputValidate) {
             boolean isSelectedItemInBasketExist = clientService.isProductInBasketExist(clientName, productId);
             if (!isSelectedItemInBasketExist) {
-                System.out.printf("%s does not exist.Try one more time: ", selectedItemToRemove);
+                System.out.printf("%s does not exist in your basket.Try one more time: ", selectedItemToRemove);
                 selectedItemToRemove = scanner.nextLine();
             } else {
                 clientService.removeItemFromBasket(clientName, productId);
@@ -273,7 +278,7 @@ public class UI {
             boolean isSelectedItemInBasketExist = clientService.isProductInBasketExist(clientName, productId);
 
             if (!isSelectedItemInBasketExist) {
-                System.out.printf("%s does not exist.Try one more time: ", selectedItemToRemove);
+                System.out.printf("%s does not exist in your basket.Try one more time: ", selectedItemToRemove);
                 selectedItemToRemove = scanner.nextLine();
             } else {
                 boolean isValidCount = true;
@@ -282,8 +287,8 @@ public class UI {
                     boolean isProductSufficientInBasketExist =
                             clientService.isProductSufficientInBasketExist(clientName, productId, selectedCount);
                     if (!isProductSufficientInBasketExist) {
-                        System.out.println("You entered wrong count. Try one more time.");
-                        System.out.printf("Select right count of %s:", selectedItemToRemove);
+                        System.out.println("You entered the wrong count. Try one more time.");
+                        System.out.printf("Select the right count of %s:", selectedItemToRemove);
                         selectedCount = scanner.nextInt();
                         scanner.nextLine();
                     } else {
