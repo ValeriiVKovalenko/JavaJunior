@@ -146,4 +146,9 @@ o,sell,<size>
         return arr;
     }
 
+    public static void main(String[] args) {
+     OrderBookManager orderBookManager = new OrderBookManager();
+     orderBookManager.start();
+    }
+
 }
