@@ -7,4 +7,6 @@ public class ProgramExecutor {
         UI ui = new UI();
         ui.start();
     }
+    //C:\Users\Valerii\Desktop\EncryptsomeText.txt
+    // C:\Users\Valerii\Desktop\someText.txt
 }

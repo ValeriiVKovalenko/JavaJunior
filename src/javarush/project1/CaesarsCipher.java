@@ -1,55 +1,45 @@
 package javarush.project1;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 
 public class CaesarsCipher {
-    public static final String PATH_DIRECTORY = "project1";
 
-    public void encryption(String fileName) throws IOException {
-        Path inputFilePath = Path.of(PATH_DIRECTORY, fileName);
-        Path outputFilePath = Path.of(PATH_DIRECTORY, "Encryption" + fileName);
+    public void encrypt(String fileAbsolutePath, int key) throws IOException {
+        //
+        Path inputFilePath = Path.of(fileAbsolutePath);
+        Path outputFilePath = inputFilePath.resolveSibling("Encrypt" + inputFilePath.getFileName());
 
-        try (BufferedReader reader = Files.newBufferedReader(inputFilePath);
-             BufferedWriter writer = Files.newBufferedWriter(outputFilePath)) {
+        String inputText = Files.readString(inputFilePath);
 
+        StringBuilder encryptText = new StringBuilder();
 
-            char[] buffer = new char[1024];
-            int charsRead;
-
-            while ((charsRead = reader.read(buffer)) != -1) {
-                for (int i = 0; i < charsRead; i++) {
-                    char currentSymbol = buffer[i];
-                    int offset = 3;
-
-                    char newSymbol = (char) (currentSymbol + offset);
-                    writer.write(newSymbol);
-                }
-            }
-        }
+        for (int i = 0; i < inputText.length(); i++) {
+            char currentSymbol = inputText.charAt(i);
+            char encryptedSymbol = (char) (currentSymbol + key);
+            encryptText.append(encryptedSymbol);
+         }
+        Files.writeString(outputFilePath, encryptText.toString(), StandardCharsets.UTF_8, StandardOpenOption.CREATE);
     }
 
-    public void decryption(String fileName) throws IOException {
-        Path inputFilePath = Path.of(PATH_DIRECTORY, fileName);
-        Path outputFilePath = Path.of(PATH_DIRECTORY, "De" + fileName.substring(2));
+    public void decrypt(String fileAbsolutePath, int key) throws IOException {
+        Path inputFilePath = Path.of(fileAbsolutePath);
+        String fileName = inputFilePath.getFileName().toString();
+        String decryptedFileName = "Decrypt" + fileName.substring(7);
+        Path outputFilePath = inputFilePath.resolveSibling(decryptedFileName);
 
-        try (BufferedReader reader = Files.newBufferedReader(inputFilePath);
-             BufferedWriter writer = Files.newBufferedWriter(outputFilePath)) {
+        String inputText = Files.readString(inputFilePath);
 
-            char[] buffer = new char[1024];
-            int charsRead;
+        StringBuilder decryptText = new StringBuilder();
 
-            while ((charsRead = reader.read(buffer)) != -1) {
-                for (int i = 0; i < charsRead; i++) {
-                    char c = buffer[i];
-                    int offset = 3;
-                    char newSymbol = (char) (c - offset);
-                    writer.write(newSymbol);
-                }
-            }
+        for (int i = 0; i < inputText.length(); i++) {
+            char currentSymbol = inputText.charAt(i);
+            char encryptedSymbol = (char) (currentSymbol - key);
+            decryptText.append(encryptedSymbol);
+        }
+        Files.writeString(outputFilePath, decryptText.toString(), StandardCharsets.UTF_8, StandardOpenOption.CREATE);
         }
     }
-}
